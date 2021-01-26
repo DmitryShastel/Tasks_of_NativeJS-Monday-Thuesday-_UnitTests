@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <title>Arrays and Objects</title>
+</head>
+<body>
+
+<div>
+<!-- 1-  Создайте массив arr = ['a', 'b', 'c']. Выведите его на экран с помощью функции alert.-->
+<script>
+    let arr1 = ["a", "b", "c"]
+    console.log(arr1);
+</script>
+
+
+<!--2 - С помощью массива arr из предыдущего номера выведите на экран содержимое первого, второго и третьего элементов.-->
+<script>
+    let lit = ["a", "b", "c"]
+    let newarr = lit.splice(1);
+    console.log(newarr);
+</script>
+
+
+<!-- 3 - Создайте массив arr = ['a', 'b', 'c', 'd'] и с его помощью выведите на экран строку 'a+b, c+d'.-->
+    <script>
+        let arr2 = ['a', 'b', 'c', 'd'];
+        console.log(arr2[0] + '+' + arr2[1] + ',', arr2[2] + '+' + arr2[3] )
+    </script>
+
+
+<!-- 4 - Создайте массив arr с элементами 2, 5, 3, 9. Умножьте первый элемент массива на второй, а третий элемент
+ на четвертый. Результаты сложите, присвойте переменной result. Выведите на экран значение этой переменной.-->
+<script>
+    let arr3 = [2, 5, 3, 9];
+    let a = arr3[0] * arr3[1];
+    let b = arr3[2] * arr3[3];
+    let c = a + b;
+    console.log(c);
+</script>
+
+   <!-- 5 - Создайте объект obj = {a: 1, b: 2, c: 3} Выведите на экран элемент с ключом 'c' двумя способами: через квадратные
+    скобки и как свойство объекта:-->
+    <script>
+            let obj = {a: 1, b: 2, c: 3};
+            console.log(obj.c, obj["c"]);
+    </script>
+
+</div>
+</body>
+</html>
