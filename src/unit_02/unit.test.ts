@@ -1,7 +1,7 @@
-import {divisionCD, multAB, summEF} from './tasks_from_list';
+import {divisionCD, multAB, summEF, summE1F1, divisine2f2, a1, a2, getValue} from "./tasks_from_list2";
 
 //1
-test ('multiplication should be correct', () => {
+test ('multiplicationAB should be correct', () => {
 
     //data:
     const a = +3;
@@ -14,7 +14,7 @@ test ('multiplication should be correct', () => {
     expect(result1).toBe(27);
 })
 //2
-test ('division should be correct', () => {
+test ('divisionCD should be correct', () => {
 
     //data:
     const c = +7;
@@ -28,14 +28,75 @@ test ('division should be correct', () => {
     expect(result1.toFixed(2)).toBe("0.78")
 })
 //3
-test ('summ should be correct', ()=> {
+test ('summEF should be correct', ()=> {
     //data:
     const e = +3;
     const f = +5;
 
     //action:
-    const result1 = summEF(e,f);
+    const resultEF = summEF(e,f);
 
     //expected result
-    expect(result1).toBe(8)
+    expect(resultEF).toBe(8)
+})
+//4
+test ('summE1F1 should be correct', () => {
+    //data:
+    const e1 = '3';
+    const f1 = +5;
+
+    //action:
+    const resultE1F1 = summE1F1(e1,f1);
+
+    //expected result:
+    expect(resultE1F1).toBe("35");
+})
+//5
+test('divisione2f2 should be correct', () => {
+    //data:
+    const e2 = 3;
+    const f2 = 0;
+
+    //action
+    const resulte2f2 = divisine2f2(e2,f2);
+
+    //expected result:
+    expect(resulte2f2).toBe(Infinity)
+})
+//6
+test('summe3f3 should be correct', () => {
+    //data:
+    const e3 = 3;
+    const f3 = 'Hello';
+
+    //action:
+    const resulte3f3 = a1(e3,f3);
+
+    //expected result:
+    expect(resulte3f3).toBe('3Hello');
+})
+//7
+test('multiplicatione4f4 should be correct', () => {
+
+    //data:
+    const e4 = 3;
+    const f4 = 'Hello';
+
+    //action:
+    const resulte4f4 = a2(e4,f4);
+
+    //expected result:
+    expect(resulte4f4).toBe(NaN);
+})
+//8
+test('the return value should be correct', () => {
+
+    //data:
+    const bv = 'hello'
+
+    //action:
+    const resultA = getValue(bv);
+
+    //expected result:
+    expect(resultA).toBe('hello');
 })

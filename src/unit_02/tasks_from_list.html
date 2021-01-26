@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <title>Title</title>
+</head>
+
+<body >
+
+<style>
+    .d {
+        margin-bottom: 10px;
+    }
+</style>
+
+
+<div class = "d">
+    //8
+    <input id = "in" type = "text"/>
+    <button onClick = "getValue()">send</button>
+    <script>
+        let getValue = () => {
+            console.log(document.getElementById("in").value);
+        }
+    </script>
+</div>
+
+<div class = "d">
+    //9
+    <input id = "in2" type = "text" onClick = "clearInput"/>
+    <button onClick = "getValue2(); clearInput()">send</button>
+    <script>
+        let getValue2 = () => {
+            console.log(document.getElementById("in2").value);
+            input: "";
+        }
+        let clearInput = () => {
+            document.getElementById("in2").value = "";
+        }
+    </script>
+</div>
+
+<div class = "d">
+    //10
+    <input id = "in3" type = "value"/>
+    <button onClick = "multiplication()">send</button>
+    <script>
+        let multiplication = () => {
+            console.log(document.getElementById('in3').value * 10)
+        }
+    </script>
+</div>
+
+<!--<div class = "d">
+    //11
+    <input id = "in4" type = "text"/>
+    <button onClick = "summ()">send</button>
+    <script>
+        let summ = () => {
+            let a = 10;
+            console.log(document.getElementById('in4').value)
+
+        }
+
+    </script>
+</div>-->
+
+
+<script src="tasks_from_list2.js"></script>
+
+</body>
+</html>
