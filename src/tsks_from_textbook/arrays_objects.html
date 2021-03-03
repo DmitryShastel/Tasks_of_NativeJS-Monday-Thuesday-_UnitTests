@@ -192,8 +192,30 @@
        /*  24 -  Если переменная b равна нулю или равна двум, то прибавьте к ней 7, иначе поделите ее на 10.
         Выведите новое значение переменной на экран. Проверьте работу скрипта при b, равном 5, 0, -3, 2.*/
 
-        let b3 = 5;
-        if (b3 == 0 || ) alert(b3 + 7)
+       /* let b3 = 5;
+        if (b3 == 0 || ) alert(b3 + 7)*/
+
+
+        var r = {
+            name: 'it-kamasutra.com',
+            protokol: "https",
+            maxStudentsCount: 10,
+            isOnline: true,
+            students: ['ivan', 'andrey', 'farid'],
+            classroom: {
+                teacher: {
+                    name: 'wew',
+                    age: 18
+                }
+            }
+        }
+        var t = {...r}
+        t.name = 'it-incubator.by'
+        t.isOnline = false
+        t.students.push('Marry')
+        t.classroom.teacher.name = 'Dmitry'
+        console.log(t)
+
 
 
 
