@@ -152,7 +152,14 @@
         }
     };
 
-    let man6FullCopy  //  your code
+    let man6FullCopy = {
+        ...man6,
+        mother: {...man6.mother},
+        work: {...man6.work},
+        parents: [{...man6.parents}],
+        favoriteDish: {...man6.parents.favoriteDish},
+        }
+        //console.log(man6FullCopy);
 
 
     //10 Array of objects inside an object -> object -> array -> object ->  object
