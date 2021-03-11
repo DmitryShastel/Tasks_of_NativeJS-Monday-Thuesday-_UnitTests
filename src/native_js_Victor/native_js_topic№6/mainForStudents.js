@@ -44,38 +44,43 @@ const user = {
 }
 
 //1. Создайте поверхностную копию объекта user
-let copyUser;
+let copyUser = {...user}
 
 //Проверка:
-// console.log(???)
-// console.log(???)
+console.log(user === copyUser) //expect: false
+console.log(copyUser.friends === user.friends) //expect: true
 
 //2. Полная (глубокая) копия объекта user
-let deepCopyUser;
+let deepCopyUser = {...user, friends: [...user.friends]};
 
 //Проверка:
-// console.log(???)
-// console.log(???)
+ console.log(user === deepCopyUser) //expect: false
+ console.log(deepCopyUser.friends === user.friends) //expect: false
 
 //3. Поверхностная копия массива students
-let copyStudents;
+let copyStudents = [...students]
 
 //Проверка:
-// console.log(???)
-// console.log(???)
+console.log(students === copyStudents) //expect: false
+console.log(copyStudents[0] === students[0]) //expect: true
 
 //4. Полная (глубокая) копия массива students (map)
-let deepCopyStudents;
+let deepCopyStudents = students.map(s => ({...students}))
 
 //Проверка:
-// console.log(???)
-// console.log(???)
+console.log(students === deepCopyStudents) //expect: false
+console.log(deepCopyStudents[0] === students[0]) //expect: false
 
 // NB!!! Далее все преобразования выполняем не модифицируя исходный массив students
 // Вывод результатов - в консоль
 
 //5. Отсортируйте deepCopyStudents по алфавиту (sort)
-let sortByName;
+let sortByName = [...students].sort(function(a,b){
+    if (a.name < b.name)
+        return -1
+    if(a.name > b.name)
+        return 1
+})
 console.log(sortByName);
 
 //5a. Отсортируйте deepCopyStudents по успеваемости(лучший идёт первым)(sort)
@@ -83,15 +88,15 @@ let sortByScores;
 console.log(sortByScores);
 
 //6. Сформируйте массив студентов, у которых 100 и более баллов (filter)
-let  bestStudents;
-console.log(bestStudents)
+let  bestStudents = students.filter( students => students.scores >= 100)
+//console.log(bestStudents)
 
 //6a. Получите массив ("вырежьте") из трёх лучших студентов из массива deepCopyStudents (splice)
-https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
+//https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
 
 let topStudents;
-console.log(topStudents)
-console.log(deepCopyStudents)
+/*console.log(topStudents)
+console.log(deepCopyStudents)*/
 
 //6b. Объедините массивы deepCopyStudents и topStudents так,
 // чтоб сохранился порядок сортировки (spread-опреатор )
