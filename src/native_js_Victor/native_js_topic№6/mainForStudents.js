@@ -65,17 +65,17 @@ console.log(students === copyStudents) //expect: false
 console.log(copyStudents[0] === students[0]) //expect: true
 
 //4. Полная (глубокая) копия массива students (map)
-let deepCopyStudents = students.map(s => ({...students}))
+let deepCopyStudents = students.map(s => ({...s}))
 
 //Проверка:
-console.log(students === deepCopyStudents) //expect: false
+console.log(deepCopyStudents === copyStudents) //expect: false
 console.log(deepCopyStudents[0] === students[0]) //expect: false
 
 // NB!!! Далее все преобразования выполняем не модифицируя исходный массив students
 // Вывод результатов - в консоль
 
 //5. Отсортируйте deepCopyStudents по алфавиту (sort)
-let sortByName = [...students].sort(function(a,b){
+let sortByName = deepCopyStudents.sort(function(a,b){
     if (a.name < b.name)
         return -1
     if(a.name > b.name)
@@ -84,27 +84,28 @@ let sortByName = [...students].sort(function(a,b){
 console.log(sortByName);
 
 //5a. Отсортируйте deepCopyStudents по успеваемости(лучший идёт первым)(sort)
-let sortByScores;
+let sortByScores = deepCopyStudents.sort((a,b)=> b.scores - a.scores)
 console.log(sortByScores);
 
 //6. Сформируйте массив студентов, у которых 100 и более баллов (filter)
-let  bestStudents = students.filter( students => students.scores >= 100)
-//console.log(bestStudents)
+let  bestStudents = students.filter( s => s.scores >= 100)
+console.log(bestStudents)
 
 //6a. Получите массив ("вырежьте") из трёх лучших студентов из массива deepCopyStudents (splice)
 //https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
 
-let topStudents;
-/*console.log(topStudents)
-console.log(deepCopyStudents)*/
+let topStudents = deepCopyStudents.splice(0, 3);
+console.log(topStudents)
+console.log(deepCopyStudents)
+
 
 //6b. Объедините массивы deepCopyStudents и topStudents так,
 // чтоб сохранился порядок сортировки (spread-опреатор )
-let newDeepCopyStudents;
+let newDeepCopyStudents = [ ...topStudents, ...deepCopyStudents]
 console.log(newDeepCopyStudents)
 
 //7. Сформируйте массив холостых студентов (filter)
-let notMarriedStudents;
+let notMarriedStudents = students.filter(s => s.isMarried === false)
 console.log(notMarriedStudents)
 
 //8. Сформируйте массив имён студентов (map)
