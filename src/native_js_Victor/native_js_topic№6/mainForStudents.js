@@ -121,23 +121,27 @@ let namesWithComma = studentsNames.join(', ');
 console.log(namesWithComma)
 
 //9. Добавьте всем студентам свойство "isStudent" со значением true (map)
-let trueStudents;
+let trueStudents = students.map(s => {s.isStudent = true
+return {...students}})
 console.log(trueStudents)
 
 //10. Nick женился. Выполните выполните соответствующие преобразование массива students (map)
-let studentsWithMarriedNick;
+let studentsWithMarriedNick = students.map(s =>  (s.name === 'Nick') ? {...s, isMarried: true} : s);
 console.log(studentsWithMarriedNick)
 
 //11. Найдите студента по имени Ann (find)
-let ann;
+let ann = students.find(s => s.name === 'Ann')
 console.log(ann)
 
 //12. Найдите студента с самым высоким баллом (reduce)
-let bestStudent;
+let bestStudent = students.reduce((accumulator, curentValue) => {
+    return accumulator.scores > curentValue.scores ? accumulator : curentValue
+})
 console.log(bestStudent)
 
 //13. Найдите сумму баллов всех студентов (reduce)
-let scoresSum;
+let reduce2 = (accumulator, curentValue) => accumulator + curentValue.scores;
+let scoresSum = studentsWithMarriedNick.reduce(reduce2, 0);
 console.log(scoresSum)
 
 // 14.Напишите функцию addFriends, которая принимает параметром массив students
@@ -145,7 +149,10 @@ console.log(scoresSum)
 // значением которого является массив имён всех остальных студентов из массива,
 // за исключением собственного имени студента. Т.е. в друзьях у Боба Боба быть не должно.
 const addFriends = (students) => {
-   //..............................
+   const studentsWithFriends = students.map (st => {
+       return {...st, friends: students.map(s => s.name).filter(n => n !== st.name)}
+   })
+    return studentsWithFriends
 }
 console.log(addFriends(students));
 
