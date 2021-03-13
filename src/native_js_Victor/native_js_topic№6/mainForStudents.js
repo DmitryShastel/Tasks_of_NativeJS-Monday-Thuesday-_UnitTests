@@ -109,15 +109,15 @@ let notMarriedStudents = students.filter(s => s.isMarried === false)
 console.log(notMarriedStudents)
 
 //8. Сформируйте массив имён студентов (map)
-let studentsNames;
+let studentsNames = students.map(s => s.name)
 console.log(studentsNames)
 
 //8a. Сформируйте строку из имён студентов, разделённых
 // - запятой (join)
 // - пробелом (join)
-let nameWithSpace;
+let nameWithSpace = studentsNames.join(' ');
 console.log(nameWithSpace)
-let namesWithComma;
+let namesWithComma = studentsNames.join(', ');
 console.log(namesWithComma)
 
 //9. Добавьте всем студентам свойство "isStudent" со значением true (map)
