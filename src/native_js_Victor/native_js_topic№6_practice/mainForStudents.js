@@ -51,7 +51,7 @@ console.log(user === copyUser) //expect: false
 console.log(copyUser.friends === user.friends) //expect: true
 
 //2. Полная (глубокая) копия объекта user
-let deepCopyUser = {...user, friends: [...user.friends]};
+let deepCopyUser = (user) => ({...user, friends: [...user.friends]});
 
 //Проверка:
  console.log(user === deepCopyUser) //expect: false
