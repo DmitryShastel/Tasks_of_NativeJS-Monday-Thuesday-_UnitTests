@@ -1,4 +1,6 @@
-import {divisionCD, multAB, summEF, summE1F1, divisine2f2, a1, a2, getValue} from "./tasks_from_list2";
+import {divisionCD,
+    multAB, summEF, summE1F1, divisine2f2, a1, a2, getValue}
+    from "./tasks_from_list2";
 
 //1
 test ('multiplicationAB should be correct', () => {
