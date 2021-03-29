@@ -20,7 +20,10 @@ export let getTriangleType = (a: number,b: number,c: number)=>  {
 
 //3
 export function getSum(number: number) {
-    return number.toString().split('').reduce((acc, el  ) => acc + Number(el),0)
+    return number
+        .toString()
+        .split('')
+        .reduce((acc, el  ) => acc + Number(el),0)
 
 
 }
