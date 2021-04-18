@@ -2,7 +2,7 @@
 let a = +3;
 let b = +9;
 
-let multAB = (a, b) => {
+export let multAB = (a, b) => {
     return a * b;
 }
 console.log(multAB(a, b));

@@ -1,11 +1,11 @@
 //1
-let a = +3;
+/*let a = +3;
 let b = +9;
 
-export let multAB = (a, b) => {
+let multAB = (a, b) => {
     return a * b;
 }
-console.log(multAB(a, b));
+console.log(multAB(a, b));*/
 
 //2
 let c = +7;
@@ -60,6 +60,8 @@ let bv = 'hello'
 export let getValue = (bv) => {
     return(bv);
 }
+
+
 
 
 
