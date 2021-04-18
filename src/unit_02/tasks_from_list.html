@@ -78,6 +78,30 @@
     </script>
 </div>
 
+//13
+<div class = "d">
+    <form>
+        <input id = "in7" type = "number" value = "1"><br>
+        <input id = "in8" type = "number" value = "1"><br>
+        <input type = "button" value = "Summ two numbers" onclick = "addition()"><br>
+    </form>
+    <script>
+        function addition() {
+            let a = parseInt(document.getElementById('in7').value);
+            let b = parseInt(document.getElementById('in8').value);
+
+            if (isNaN(a) == true) a = 0;
+            if (isNaN(b) == true) b = 0;
+
+            let c = a + b;
+
+            console.log(document.getElementById("result").innerHTML = a + " + " + b + " = " + c);
+
+        }
+    </script>
+    <div id = "result"></div>
+</div>
+
 <!--<div class = "d">
     //11
     <input id = "in4" type = "text"/>
