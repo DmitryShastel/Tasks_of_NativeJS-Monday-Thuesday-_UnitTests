@@ -115,6 +115,20 @@
     </script>
 </div>
 
+
+//16
+<div class = "d">
+    <input type="text" id="in10">
+    <button id="btn">Button</button>
+    <script>
+        function ctrButton() {
+            btn.disabled = this.value.trim().length === 0;
+        }
+        in10.addEventListener('input', ctrButton, false);
+        ctrButton.call(in10);
+    </script>
+</div>
+
 <!--<div class = "d">
     //11
     <input id = "in4" type = "text"/>
