@@ -8,3 +8,34 @@ const base = (n).toString(2).split('');
 const result = base.reduce((sum, num) => sum + Number(num), 0);
 
 return result;
+
+
+
+// Given an array (arr) as an argument complete the function countSmileys that should return the total 
+// number of smiling faces.
+// Rules for a smiling face:
+// Each smiley face must contain a valid pair of eyes. Eyes can be marked as : or ;
+// A smiley face can have a nose but it does not have to. Valid characters for a nose are - or ~
+// Every smiling face must have a smiling mouth that should be marked with either ) or D
+
+let count = 0;
+let validFace = [
+  ":)",
+  ";)",
+  ":-)",
+  ";-)",
+  ":~)",
+  ";~)",
+  ":D",
+  ";D",
+  ":-D",
+  ";-D",
+  ":~D",
+  ";~D"
+];
+arr.map(item => {
+  validFace.map(vitem => {
+    if (item.includes(vitem)) count++;
+  });
+});
+return arr.length == 0 ? 0 : count;
