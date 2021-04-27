@@ -10,7 +10,9 @@
 </head>
 
 <style>
- 
+ #d {
+     margin-bottom: 15px;
+ }
   
 </style>
 
@@ -18,7 +20,7 @@
 
 
    //1
-   <div>
+   <div id = 'd'>
         <input id = 'a1' type = 'text'/>
         <button onclick="numberCheck()">Task - 1</button>
         <script>
@@ -31,7 +33,26 @@
                 }
             }
         </script>
+   </div>
 
+   //2
+   <div id = 'd'>
+        <input id = 'a2' type = 'number'/><br>
+        <input id = 'a3' type = 'number'/><br>
+        <button onclick="compareValue()">Task - 2</button>
+        <script>
+            let compareValue = () => {
+                let b = document.getElementById('a2').value;
+                let c = document.getElementById('a3').value;
+                if(b > c) {
+                    console.log(b);
+                } else{
+                    console.log(c)
+                }
+            }
+        </script>
+    
+       
    </div>
    
 
