@@ -37,13 +37,13 @@
 
    //2
    <div id = 'd'>
-        <input id = 'a2' type = 'number'/><br>
-        <input id = 'a3' type = 'number'/><br>
+        <!-- <input id = 'a2' type = 'number'/><br>
+        <input id = 'a3' type = 'number'/><br> -->
         <button onclick="compareValue()">Task - 2</button>
         <script>
             let compareValue = () => {
-                let b = document.getElementById('a2').value;
-                let c = document.getElementById('a3').value;
+                let b = 5
+                let c = 1
                 if(b > c) {
                     console.log(b);
                 } else{
@@ -51,8 +51,25 @@
                 }
             }
         </script>
-    
-       
+   </div>
+
+   //3
+   <div id = 'd'>
+       <input id = 'a4' type = 'number'/><br>
+       <input id = 'a5' type = 'number'/><br>
+       <button onclick="differenceValue()">Task - 3</button>
+       <script>
+           let differenceValue = () =>{
+               let d = document.getElementById('a4').value;
+               let e = document.getElementById('a5').value;
+                    if(d > e) {
+                        console.log(d);
+                    } else {
+                        console.log(e);
+                    }
+               
+           }
+       </script>
    </div>
    
 
