@@ -2,18 +2,18 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="unit_03.js"></script>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <meta http-equiv = "X-UA-Compatible" content = "ie=edge">
+    <script src = "unit_03.js"></script>
     <title>Unit 03</title>
 </head>
 
 <style>
- #d {
-     margin-bottom: 15px;
- }
-  
+    #d {
+        margin-bottom: 15px;
+    }
+
 </style>
 
 <body>
@@ -21,61 +21,61 @@
 
    //1
    <div id = 'd'>
-        <input id = 'a1' type = 'text'/>
-        <button onclick="numberCheck()">Task - 1</button>
-        <script>
-            let numberCheck = () => {
-                let result = document.getElementById('a1').value;
-                if(result === '4') {
-                    console.log(true);
-                }  else {
-                    console.log(false)
-                }
-            }
-        </script>
+       <input id = 'a1' type = 'text'/>
+       <button onclick = "numberCheck()">Task - 1</button>
+       <script>
+           let numberCheck = () => {
+               let result = document.getElementById('a1').value;
+               if (result === '4') {
+                   console.log(true);
+               } else {
+                   console.log(false)
+               }
+           }
+       </script>
    </div>
 
    //2
    <div id = 'd'>
-        <!-- <input id = 'a2' type = 'number'/><br>
-        <input id = 'a3' type = 'number'/><br> -->
-        <button onclick="compareValue()">Task - 2</button>
-        <script>
-            let compareValue = () => {
-                let b = 5
-                let c = 1
-                if(b > c) {
-                    console.log(b);
-                } else{
-                    console.log(c)
-                }
-            }
-        </script>
+       <!-- <input id = 'a2' type = 'number'/><br>
+       <input id = 'a3' type = 'number'/><br> -->
+       <button onclick = "compareValue()">Task - 2</button>
+       <script>
+           let compareValue = () => {
+               let b = 5
+               let c = 1
+               if (b > c) {
+                   console.log(b);
+               } else {
+                   console.log(c)
+               }
+           }
+       </script>
    </div>
 
    //3
    <div id = 'd'>
        <input id = 'a4' type = 'number'/><br>
        <input id = 'a5' type = 'number'/><br>
-       <button onclick="differenceValue()">Task - 3</button>
+       <button onclick = "differenceValue()">Task - 3</button>
        <script>
-           let differenceValue = () =>{
+           let differenceValue = () => {
                let d = document.getElementById('a4').value;
                let e = document.getElementById('a5').value;
-                    if(d > e) {
-                        console.log(d);
-                    } else {
-                        console.log(e);
-                    }
-               
+               if (d > e) {
+                   console.log(d);
+               } else {
+                   console.log(e);
+               }
+
            }
        </script>
    </div>
 
    //4
    <div id = 'd'>
-       <input id = 'a6' value = "Enter your age" type = 'number' />
-       <button onclick="getAge()">Task - 4</button>
+       <input id = 'a6' value = "Enter your age" type = 'number'/>
+       <button onclick = "getAge()">Task - 4</button>
        <script>
            let getAge = () => {
                let age = document.getElementById('a6').value;
@@ -92,15 +92,17 @@
    //5
    <div id = 'd'>
        <input id = 'a7' value = 'Enter a number' type = 'number'/>
-       <button onclick="getNumber()">Task - 5</button>
+       <button onclick = "getNumber()">Task - 5</button>
        <script>
            let getNumber = () => {
                let number = document.getElementById('a7').value;
                if (number < 0) {
                    console.log('m')
-               } if (number == 0) {
+               }
+               if (number == 0) {
                    console.log('0')
-               } if (number > 0) {
+               }
+               if (number > 0) {
                    console.log('1')
                }
            }
@@ -108,34 +110,64 @@
    </div>
 
 //6
-<div id = 'd'>
-    <input id = 'a8' type = 'number'/>
-    <button onclick="f6()">Task - 6</button>
-    <script>
-        let f6 = (value) => {
-            let h = document.getElementById('a8').value;
-            if (value % 2 !== 0)
-                return console.log('even');
-            else
-                return console.log('odd');
-        }
-    </script>
-</div>
+   <div id = 'd'>
+       <input id = 'a8' type = 'number'/>
+       <button onclick = "f6()">Task - 6</button>
+       <script>
+           let f6 = (value) => {
+               let h = document.getElementById('a8').value;
+               if (value % 2 !== 0)
+                   return console.log('even');
+               else
+                   return console.log('odd');
+           }
+       </script>
+   </div>
 
 //7
-<div id = 'd'>
-    <input id = 'a9' type = 'number'/><br>
-    <input id = 'a10' type = 'number'/><br>
-    <button onclick="f7()">Task - 7</button>
-    <script>
-        let f7 = () => {
-            let a9 = document.getElementById('a9').value;
-            let a10 = document.getElementById('a10').value;
+   <div id = 'd'>
+       <input id = 'a9' type = 'number'/><br>
+       <input id = 'a10' type = 'number'/><br>
+       <button onclick = "f7()">Task - 7</button>
+       <script>
+           let f7 = () => {
+               let a9 = document.getElementById('a9').value;
+               let a10 = document.getElementById('a10').value;
 
-            console.log(Math.pow(a9, a10))
-        }
-    </script>
-</div>
+               console.log(Math.pow(a9, a10))
+           }
+       </script>
+   </div>
+
+//8
+   <div id = 'd'>
+       <select value = 'numbers' id = 'a11'>
+           <option value = "Error: select a number">Select</option>
+           <option value = "one">1</option>
+           <option value = "two">2</option>
+           <option value = "three">3</option>
+       </select>
+       <button onclick="f8()">Task - 8</button>
+       <script>
+           let f8 = () => {
+               let s = a11.value
+               console.log(s)
+              /* switch (s) {
+                  case 0:
+                      console.log('Error: select number please');
+                      break;
+                  case 1:
+                      console.log('one');
+                      break;
+                  case 2:
+                      console.log('two');
+                      break;
+                  case 3:
+                      console.log('three')
+              }*/
+           }
+       </script>
+   </div>
    
 </body>
 
