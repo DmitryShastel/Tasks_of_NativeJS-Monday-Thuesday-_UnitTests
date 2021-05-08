@@ -187,7 +187,63 @@
    </div>
 
 
-  
+   //10
+   <div id = 'd'>
+       <input id = 'a13' type = 'number'/><br>
+       <input id = 'a14' type = 'number'/><br>
+       <select id = 'a15'><br>
+           <option value="0">+</option>
+           <option value="1">-</option>
+           <option value="2">*</option>
+           <option value="3">/</option>
+       </select>
+       <button onclick="calc()">Task - 10</button>
+
+       <p id="result">The result is : </p>
+
+       <script>
+           function plus(a,b) {
+               return (a + b);
+           }
+           function minus(a,b) {
+               return a - b;
+           }
+           function multiply(a,b) {
+               return a * b;
+           }
+           function divide(a,b) {
+               return a / b;
+           }
+
+           function calc() {
+               let w;
+               let x = document.getElementById('a13').value;
+               let z = document.getElementById('a14').value;
+               let y = document.getElementById('a15').value;
+
+               switch (y) {
+                   case '0':
+                       w = plus(x, z);
+                       document.getElementById("result").innerHTML = w;
+                       break;
+                   case '1' :
+                       w = minus(x, z);
+                       document.getElementById("result").innerHTML = w;
+                       break;
+                   case '2' :
+                       w = multiply(x, z);
+                       document.getElementById("result").innerHTML = w;
+                       break;
+                   case '3' :
+                       w = divide(x, z);
+                       document.getElementById("result").innerHTML = w;
+                       break;
+                   default:
+                       w = "Don't really know...";
+               }
+           }
+       </script>
+   </div>
 
 
 
