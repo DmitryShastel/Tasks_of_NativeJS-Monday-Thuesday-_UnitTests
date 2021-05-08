@@ -1,3 +1,11 @@
+/* export let f9 = (value) => {
+     let a = document.getElementById('a12').value;
+     if (value >= 1 && value <= 32)
+         return console.log('2');
+ }*/
+
+
+
 // // Task 1
 // // При нажатии кнопки b-1 срабатывает функция f1. Функция должна прочитать содержимое i-1 и 
 // //сравнить его с числом 4 (сравнение ==). Результат сравнения - true или false выведите в out-1.
